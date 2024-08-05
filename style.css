@@ -1,30 +1,35 @@
-.meme-generator{
-    font-family: "Roboto",sans-serif;
-    text-align: center;
-}
-
-.meme-generator img{
-    height: 430px;
-    object-fit: cover;
+* {
+    font-family: sans-serif;
+    color: bisque;
 
 }
 
-.meme-generator .generate-meme-btn{
-    padding: 8px 20px;
-    border: none;
-    border: 2px solid #222;
-    border-radius: 4vh;
-    margin: 24px ,0;
-    font-size: 20px;
-    color: rgb(255, 255, 255);
-    background: #20d30c;
-    cursor: pointer;
+body,
+html {
+    background-color: #161b22;
 }
 
-.meme-generator .generate-meme-btn:hover{
-    background: #13ab02;
+main {
+    margin: 2vw;
+    display: flex;
+    justify-content: space-around;
 }
 
-.meme-generator .meme-author{
-    margin: 8px;
+.content {
+    width: 60%;
+}
+
+.sidebar {
+    border-left: 2px solid gainsboro;
+    padding-left: 3vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar button {
+    background: none;
+    border: 2px solid gainsboro;
+    border-radius: 1vw;
+    margin: 1vw 0;
+    padding: 1vw 5vw;
 }

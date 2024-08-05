@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="meme-generator">
-        <button class="generate-meme-btn">Generate meme</button>
-        <h2 class="meme-title">Loading....</h2>
-        <img src="" alt="">
-        <div class="meme-author"></div>
-    </div>
-
+   <main>
+    <section class="content">
+        <h2>Output</h2>
+        <h3>Programmer memes</h3>
+        <h3>Tell me something funny</h3>
+        <h3>Give me some wisdom</h3>
+        <h3>I want a riddle</h3>
+    </section>
+    <section class="sidebar">
+        <h2>Action</h2>
+        <button onclick="showMeme()" class="meme-btn">Show a meme</button>
+        <button onclick="showJoke()" class="joke-btn">Tell me a joke</button>
+        <button onclick="showQuote()" class="quote-btn">Random Quote</button>
+        <button onclick="showRiddle()" class="riddle-btn">Riddle me</button>
+        <button onclick="revealAnswer()" class="reveal-btn">Reveal riddle</button>
+    </section>
+   </main>
     <script src="main.js"></script>
 </body>
 </html>
