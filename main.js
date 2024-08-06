@@ -40,8 +40,11 @@ function showMeme() {
 function showJoke() {
   // Value is a string representing the joke
   const randomJokeText = getRandomData("jokes");
-  const container = document.querySelector(".joke-content");
-  container.appendChild(randomJokeText);
+  // const container = document.querySelector(".joke-content");
+  const newJoke = document.createElement('p');
+  newJoke.textContent = randomJokeText;
+  clearAll();
+  document.querySelector(".joke-content").appendChild(newJoke);
 }
 
 /**
