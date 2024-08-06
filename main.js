@@ -55,6 +55,15 @@ function showJoke() {
 function showQuote() {
   // Value should be in format: { quote: '', author: '' }
   const randomQuote = getRandomData("quotes");
+  const quote = document.createElement('p');
+  const author = document.createElement('p');
+  quote.textContent = randomQuote.quote;
+  author.textContent = "-" + randomQuote.author;
+
+  clearAll();
+  const container = document.querySelector(".quote-content");
+  container.appendChild(quote);
+  container.appendChild(author);
 }
 
 /**
