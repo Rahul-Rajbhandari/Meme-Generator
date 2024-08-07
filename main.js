@@ -107,6 +107,12 @@ function revealAnswer() {
   if (riddle && answer.hidden){
     answer.hidden= false;
   }
+  else if(riddle){
+    alert("The answer is already revealed.");
+  }
+  else{
+    alert("There is no riddle to reveal the answer to!");
+  }
  }
 
 /**
