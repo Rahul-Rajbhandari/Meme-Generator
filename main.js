@@ -23,8 +23,8 @@ function showMeme() {
   // Value is a string representing image URL
   const randomMemeUrl = getRandomData("memes");
   const container = document.querySelector(".meme-content");
-  const newImg = document.createElement('img'); 
-  newImg.setAttribute('src',randomMemeUrl);
+  const newImg = document.createElement('img');
+  newImg.setAttribute('src', randomMemeUrl);
 
   clearAll();
 
@@ -75,6 +75,21 @@ function showQuote() {
 function showRiddle() {
   // Value should be in format: { question: '', answer: '' }
   const randomRiddle = getRandomData("riddles");
+
+  const {question ,answer}= randomRiddle;
+  const questionEle = document.createElement('p');
+  const answerEle = document.createElement('p');
+
+  questionEle.textContent = question;
+  answerEle.textContent = "The answer is : " + answer;
+  answerEle.setAttribute('id','riddle-answer');
+  answerEle.hidden= true;
+
+  clearAll();
+
+  document.querySelector(".riddle-content").appendChild(questionEle);
+  document.querySelector(".riddle-content").appendChild(answerEle);
+
 }
 
 /**
@@ -84,7 +99,15 @@ function showRiddle() {
  *   that the answer is already revealed
  * - If there is a riddle shown but no answer, unhide the answer!
  */
-function revealAnswers() {}
+function revealAnswer() {
+  const riddleContainer = document.querySelector(".riddle-content");
+  const riddle = riddleContainer.querySelector("p");
+  const answer = riddleContainer.querySelector("#riddle-answer");
+
+  if (riddle && answer.hidden){
+    answer.hidden= false;
+  }
+ }
 
 /**
  * This function is used to get random data.  Don't worry about how it works, just know how to use it.  Usage is pre-filled in the functions above already, but here's an explanation of the function anyways.
